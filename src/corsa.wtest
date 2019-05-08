@@ -1,0 +1,15 @@
+import rodado.*
+
+test "corsa" {
+	
+	var corsa = new Rodado()
+	corsa.capacidad(4)
+	corsa.velocidad(150)
+	corsa.peso(1300)
+	
+	assert.equals(4,corsa.capacidad())
+	assert.equals(150,corsa.velocidad())
+	assert.equals(1300,corsa.peso())
+	
+
+}
