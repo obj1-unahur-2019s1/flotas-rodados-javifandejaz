@@ -1,0 +1,9 @@
+import rodado.*
+import dependencia.*
+
+test "dependencia" {
+	const cultura = new Dependencia()
+	cultura.empleados(31)
+
+
+}
