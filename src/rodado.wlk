@@ -16,9 +16,11 @@ class Kwid {
 	
 	method capacidad (){ return if (not tanqueAdicional){4}else{3}} 
 	
-	method velocidadMaxima(){ return if (not tanqueAdicional){120}else{150} }
+	method velocidadMaxima(){ return if (not tanqueAdicional){110}else{120} }
 	
 	method peso (){	return if(not tanqueAdicional){1200}else{1350}}
+	
+	method color(){return color}
 }
 
 
@@ -64,18 +66,11 @@ object interiorComodo{
 }
 
 
-class AutoEspecialA{
-	const capacidad = 3
-	const velocidadMaxima = 100
-	const peso = 1000
-	const color = "verde"
-}
-
-class AutoEspecialB{
-	const capacidad = 5
-	const velocidadMaxima = 115
-	const peso = 1300
-	const color = "naranja"
+class AutoEspecial{
+	var property capacidad = 0
+	var property velocidadMaxima = 0
+	var property peso = 0
+	var property color = 0
 }
 
 

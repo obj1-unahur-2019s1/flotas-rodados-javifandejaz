@@ -1,9 +1,35 @@
 import rodado.*
 import dependencia.*
 
-test "dependencia" {
-	const cultura = new Dependencia()
-	cultura.empleados(31)
+describe "dependencia" {
+	const cachito = new Corsa(color = "rojo")
+	
+	test "flota de deportes"{
+		const deportes =  new Dependencia(empleados = 45)
+		deportes.agregarAFlota(cachito)
+		deportes.agregarAFlota(new Corsa(color = "azul"))
+		deportes.agregarAFlota(new Corsa(color = "verde"))
+		deportes.agregarAFlota(new Kwid(tanqueAdicional = true))
+		deportes.agregarAFlota(new AutoEspecial(capacidad = 5, velocidadMaxima = 160, peso = 1200, color = "beige"))
+		assert.equals(6450, deportes.pesoTotalFlota())
+		assert.that(deportes.estaBienEquipada())
+		assert.equals(7, deportes.capacidadTotalEnColor("azul"))
+		assert.equals("beige", deportes.colorDelRodadoMasRapido())
+		assert.that(deportes.esGrande())
+		assert.equals(25, deportes.capacidadFaltante())
+		}
+		
+		
+	test "flota de cultura"{
+		const cultura =  new Dependencia(empleados = 31)
+		cultura.agregarAFlota(cachito)
+		cultura.agregarAFlota(new Kwid(tanqueAdicional = true))
+		cultura.agregarAFlota(new Kwid(tanqueAdicional = true))
+		cultura.agregarAFlota(new Kwid(tanqueAdicional = false))
+		cultura.agregarAFlota(trafic)
+		trafic.interior(interiorPopular); trafic.motor(motorBataton)
+		assert.equals(5, cultura.cantidad())
+		}
 
 
 }
