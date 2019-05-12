@@ -30,10 +30,10 @@ describe "dependencia" {
 		trafic.interior(interiorPopular); trafic.motor(motorBataton)
 		assert.equals(10700, cultura.pesoTotalFlota())
 		assert.notThat(cultura.estaBienEquipada())
-		assert.equals(7, cultura.capacidadTotalEnColor("azul"))
-		assert.equals("beige", cultura.colorDelRodadoMasRapido())
-		assert.that(cultura.esGrande())
-		assert.equals(25, cultura.capacidadFaltante())
+		assert.equals(10, cultura.capacidadTotalEnColor("azul"))
+		assert.equals("rojo", cultura.colorDelRodadoMasRapido())
+		assert.notThat(cultura.esGrande())
+		assert.equals(5, cultura.capacidadFaltante())
 		}
 
 
