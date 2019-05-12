@@ -28,7 +28,12 @@ describe "dependencia" {
 		cultura.agregarAFlota(new Kwid(tanqueAdicional = false))
 		cultura.agregarAFlota(trafic)
 		trafic.interior(interiorPopular); trafic.motor(motorBataton)
-		assert.equals(5, cultura.cantidad())
+		assert.equals(10700, cultura.pesoTotalFlota())
+		assert.notThat(cultura.estaBienEquipada())
+		assert.equals(7, cultura.capacidadTotalEnColor("azul"))
+		assert.equals("beige", cultura.colorDelRodadoMasRapido())
+		assert.that(cultura.esGrande())
+		assert.equals(25, cultura.capacidadFaltante())
 		}
 
 
